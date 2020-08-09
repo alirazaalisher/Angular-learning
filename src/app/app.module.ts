@@ -33,7 +33,8 @@ import { MatSliderModule } from "@angular/material/slider";
 import { baseURL } from "./shared/baseurl";
 import { HttpClientModule } from "@angular/common/http";
 import { ProcessHTTPMsgService } from "./services/process-httpmsg.service";
-import { HighlightDirective } from './directives/highlight.directive';
+import { HighlightDirective } from "./directives/highlight.directive";
+import { FeedbackService } from "./services/feedback.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,6 +76,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     PromotionService,
     LeaderService,
     ProcessHTTPMsgService,
+    FeedbackService,
     { provide: "BaseURL", useValue: baseURL },
   ],
   bootstrap: [AppComponent],

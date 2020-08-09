@@ -21,6 +21,8 @@ import { flyInOut, expand } from "../animations/app.animation";
 export class HomeComponent implements OnInit {
   dish: Dish;
   dishErrMess: string;
+  leaderErrMess: string;
+  promotionErrMess: string;
   promotion: Promotion;
   leader: Leader;
   constructor(
@@ -37,11 +39,16 @@ export class HomeComponent implements OnInit {
     );
     console.log(this.dishErrMess);
 
-    this.promotionservice
-      .getFeaturedPromotion()
-      .subscribe((promotion) => (this.promotion = promotion));
-    this.leaderservice
-      .getFeaturedLeader()
-      .subscribe((leader) => (this.leader = leader));
+    this.promotionservice.getFeaturedPromotion().subscribe(
+      (promotion) => (this.promotion = promotion),
+      (errmess) => (this.promotionErrMess = <any>errmess)
+    );
+    console.log(this.promotionErrMess);
+
+    this.leaderservice.getFeaturedLeader().subscribe(
+      (leader) => (this.leader = leader),
+      (errmess) => (this.leaderErrMess = <any>errmess)
+    );
+    console.log(this.leaderErrMess);
   }
 }
