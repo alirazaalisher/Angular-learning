@@ -118,7 +118,7 @@
 
     </mat-list>
   </div>
-  <div [hidden]='feedback || feedbackErrMess' *ngIf='submitted'>
+  <div [hidden]='feedback || feedbackErrMess' *ngIf='submitting'>
     <mat-spinner></mat-spinner>
     <h4>Loading . . . Please Wait</h4>
   </div>

@@ -58,7 +58,7 @@ export class ContactComponent implements OnInit {
     this.response = false;
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   createForm() {
     this.feedbackForm = this.fb.group({
@@ -112,6 +112,7 @@ export class ContactComponent implements OnInit {
     }
   }
   onSubmit() {
+
     this.submitting = true;
     this.feedback = this.feedbackForm.value;
     this.copyFeedback = this.feedback;

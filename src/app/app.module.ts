@@ -35,6 +35,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProcessHTTPMsgService } from "./services/process-httpmsg.service";
 import { HighlightDirective } from "./directives/highlight.directive";
 import { FeedbackService } from "./services/feedback.service";
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { FeedbackService } from "./services/feedback.service";
     ContactComponent,
     LoginComponent,
     HighlightDirective,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
